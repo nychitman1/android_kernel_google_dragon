@@ -8,3 +8,7 @@ endif
 obj-$(CONFIG_ION_DUMMY) += ion_dummy_driver.o
 obj-$(CONFIG_ION_TEGRA) += tegra/
 
+#TODO: remove me b/62058353
+# WE SHOULD FIX THIS ONE
+subdir-ccflags-y += \
+	-Wno-enum-conversion

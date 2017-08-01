@@ -49,3 +49,8 @@ obj-$(CONFIG_ST_THERMAL)	+= st/
 obj-$(CONFIG_MAX77620_THERMAL)	+= max77620-thermal.o
 obj-y				+= tegra/
 obj-$(CONFIG_HISI_THERMAL)     += hisi_thermal.o
+
+#TODO: remove me b/62058353
+subdir-ccflags-y += \
+	-Wno-parentheses-equality \
+	-Wno-enum-conversion
