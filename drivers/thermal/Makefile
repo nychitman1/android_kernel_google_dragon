@@ -53,4 +53,5 @@ obj-$(CONFIG_HISI_THERMAL)     += hisi_thermal.o
 #TODO: remove me b/62058353
 subdir-ccflags-y += \
 	-Wno-parentheses-equality \
-	-Wno-enum-conversion
+	-Wno-enum-conversion \
+	-Wno-gcc-compat
