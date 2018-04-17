@@ -349,7 +349,6 @@ LD		= $(CROSS_COMPILE)ld
 LD		+= -O3
 CC		= $(CCACHE) $(CROSS_COMPILE)gcc
 CC		+= -O3 -mtune=cortex-a57.cortex-a53
-CC		+= -fmodulo-sched -fmodulo-sched-allow-regmoves
 CC		+= -fgraphite-identity -floop-block -floop-interchange -floop-strip-mine
 CC		+= -ftree-loop-linear -ftree-loop-distribution
 CPP		= $(CC) -E
@@ -398,7 +397,7 @@ USERINCLUDE    := \
 		-Iarch/$(hdr-arch)/include/generated/uapi \
 		-I$(srctree)/include/uapi \
 		-Iinclude/generated/uapi \
-                -include $(srctree)/include/linux/kconfig.h
+        -include $(srctree)/include/linux/kconfig.h
 
 ifneq ($(WIFIVERSION),)
 USERINCLUDE	:= -I$(srctree)/include/wireless$(WIFIVERSION)/uapi \
